@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/ui/pages/home_page.dart';
 import 'package:portfolio/ui/pages/splash_page.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
         fontFamily: Fonts.fira,
         scaffoldBackgroundColor: AppColors.bgColor,
       ),
-      home: const HomePage(),
+      home: const SplashPage(),
       builder: (context, child) {
         return ResponsiveBreakpoints.builder(
           child: child!,
