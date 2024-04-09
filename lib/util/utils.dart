@@ -28,6 +28,7 @@ class Styles {
     fontVariations: regular,
     fontSize: 16.0,
     height: 2.24,
+    letterSpacing: -0.5,
   );
 
   static const TextStyle bodyMediumBold = TextStyle(
@@ -36,13 +37,14 @@ class Styles {
     fontVariations: bold,
     fontSize: 16.0,
     height: 2.24,
+    letterSpacing: -0.5,
   );
 
   static const TextStyle bodyLarge = TextStyle(
     color: AppColors.secondary,
     fontFamily: Fonts.fira,
     fontVariations: regular,
-    fontSize: 28.0,
+    fontSize: 24.0,
   );
 
   static const TextStyle labelMedium = TextStyle(
@@ -78,8 +80,17 @@ class Styles {
     color: AppColors.primary,
     fontFamily: Fonts.fredoka,
     fontVariations: bold,
+    fontSize: 24.0,
+    letterSpacing: 2.0,
+  );
+
+  static const TextStyle headlineMedium2 = TextStyle(
+    color: AppColors.primary,
+    fontFamily: Fonts.fredoka,
+    fontVariations: bold,
     fontSize: 28.0,
     letterSpacing: 2.0,
+    height: 1.0,
   );
 
   static const TextStyle titleMedium = TextStyle(

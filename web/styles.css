@@ -1,0 +1,11 @@
+.logo-center {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 25vh;
+  height: fit-content;
+}

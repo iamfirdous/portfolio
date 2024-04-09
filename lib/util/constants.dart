@@ -20,7 +20,6 @@ class Images {
   static const String path = 'assets/images/';
   static const String png = '.png';
   static const String svg = '.svg';
-  static const String logo = '${path}logo$png';
   static const String map_marker = '${path}map_marker$png';
   static const String my_art = '${path}my_art$png';
 
@@ -58,14 +57,20 @@ class Texts {
 
   static const String im = 'I’m ';
   static const String summary = ', a developer from India. I have experience primarily in mobile app projects, working with various frameworks such as ';
-  static const String flutter = 'Flutter';
   static const String comma = ', ';
-  static const String android = 'Native Android';
   static const String and = ' and ';
-  static const String ionic = 'Ionic';
   static const String dot = '.';
 
+  static const String android = 'Native Android';
+  static const String angular = 'Angular';
+  static const String figma = 'Figma';
+  static const String firebase = 'Firebase';
+  static const String flutter = 'Flutter';
+  static const String ionic = 'Ionic';
+  static const String nodejs = 'NodeJS';
+
   static const String resume = 'Resume';
+  static const String downloading = 'Downloading resume';
   static const String language_title = 'You can speak with me in';
   static const String urdu = 'Urdu';
   static const String tamil = 'Tamil';
@@ -116,4 +121,5 @@ class Texts {
   static const String mail = 'mailto:mohd.firdous1995@gmail.com';
   static const String github = 'https://github.com/iamfirdous';
   static const String linkedin = 'https://linkedin.com/in/iamfirdous';
+  static const String chennai = 'https://maps.app.goo.gl/PdeJtWb5jWs5FRBHA';
 }

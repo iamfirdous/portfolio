@@ -10,11 +10,12 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = Utils.isMobile(context);
     return TextButton(
       onPressed: onTap,
       style: TextButton.styleFrom(
         backgroundColor: AppColors.primary,
-        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 14.0),
+        padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: isMobile ? 12.0 : 14.0),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       ),
       child: Text(text, style: Styles.titleMedium),

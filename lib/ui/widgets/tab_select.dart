@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:portfolio/util/utils.dart';
@@ -34,6 +35,7 @@ class TabSelect extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(32.0)),
       ),
       child: TabBar(
+        dragStartBehavior: DragStartBehavior.down,
         indicatorSize: TabBarIndicatorSize.tab,
         indicator: BoxDecoration(
           borderRadius: BorderRadius.circular(32.0),
@@ -52,8 +54,9 @@ class TabSelect extends StatelessWidget {
     const name = Text(Texts.name, style: Styles.headlineMedium);
     final contact = InkWell(
       onTap: () => launchUrl(Uri.parse(Texts.mail)),
+      borderRadius: BorderRadius.circular(8.0),
       child: const Padding(
-        padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
+        padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
         child: Text(Texts.contact, style: Styles.label),
       ),
     );
@@ -64,7 +67,7 @@ class TabSelect extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(height: isMobile ? 24.0 : 48.0),
+          SizedBox(height: isMobile ? 12.0 : 48.0),
           if (isMobile) ...[
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),

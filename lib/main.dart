@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/ui/pages/splash_page.dart';
+import 'package:portfolio/ui/pages/home_page.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:timezone/browser.dart' as tz;
+import 'package:timezone/data/latest.dart' as tz;
 
-void main() async {
-  await tz.initializeTimeZone();
+void main() {
+  tz.initializeTimeZones();
   runApp(const MyApp());
 }
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         fontFamily: Fonts.fira,
         scaffoldBackgroundColor: AppColors.bgColor,
       ),
-      home: const SplashPage(),
+      home: const HomePage(),
       builder: (context, child) {
         return ResponsiveBreakpoints.builder(
           child: child!,

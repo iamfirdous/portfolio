@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "firdous-resume"
+  },
+  "targets": {
+    "firdous-resume": {
+      "hosting": {
+        "firdous": [
+          "firdous"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
