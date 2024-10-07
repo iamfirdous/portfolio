@@ -15,11 +15,13 @@ class AboutPage extends StatelessWidget {
     final isMobile = Utils.isMobile(context);
 
     Widget flex(Widget card1, Widget card2, int position) {
+      final duration = position == 2 ? animationDuration : 600;
       return Flex(
         direction: isMobile ? Axis.vertical : Axis.horizontal,
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          SlideInGrid(position: position == 1 ? 0 : 2, duration: position == 2 ? animationDuration : 600, child: card1),
+          SlideInGrid(position: position == 1 ? 0 : 2, duration: duration, child: card1),
           const SizedBox.square(dimension: 16.0),
           SlideInGrid(position: position == 1 ? 1 : 3, child: card2),
         ],
@@ -27,7 +29,7 @@ class AboutPage extends StatelessWidget {
     }
 
     return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: isMobile ? 24.0 : 48.0),
+      padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: isMobile ? 16.0 : 48.0),
       child: AnimationLimiter(
         child: Column(
           children: [

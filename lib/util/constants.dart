@@ -10,7 +10,7 @@ class Fonts {
 class AppColors {
   static const Color primary = Color(0xFF524FE0);
   static const Color secondary = Color(0xFF000000);
-  static const Color bgColor = Color(0xFFF9FAFF);
+  static const Color bgColor = Color(0xFFECEDF3);
   static const Color cardColor = Color(0xFFFFFFFF);
   static const Color grey = Color(0xFFEAEAFF);
   static const Color red = Color(0xFFEB5757);
@@ -22,6 +22,7 @@ class Images {
   static const String svg = '.svg';
   static const String map_marker = '${path}map_marker$png';
   static const String my_art = '${path}my_art$png';
+  static const String my_art_mobile = '${path}my_art_mobile$png';
 
   static const String letter_english = '${path}letter_english$svg';
   static const String letter_hindi = '${path}letter_hindi$svg';

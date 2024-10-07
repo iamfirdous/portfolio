@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tilt/flutter_tilt.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:portfolio/util/utils.dart';
 
@@ -29,18 +30,29 @@ class AppCard extends StatelessWidget {
       vertical: isMobile ? 24.0 : 32.0,
     );
 
-    return Container(
+    final borderRadius = BorderRadius.circular(32.0);
+
+    final card = Container(
       width: width,
       height: height,
       constraints: constraints,
       padding: padding,
+      clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
         color: AppColors.cardColor,
-        borderRadius: BorderRadius.circular(32.0),
+        borderRadius: borderRadius,
         boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4.0)],
         image: bgImage != null ? DecorationImage(image: AssetImage(bgImage!), fit: BoxFit.cover) : null,
       ),
       child: child,
     );
+
+    final cardWithTilt = Tilt(
+      tiltConfig: const TiltConfig(angle: 12.0, enableGestureSensors: false),
+      borderRadius: borderRadius,
+      child: card,
+    );
+
+    return isMobile ? card : cardWithTilt;
   }
 }

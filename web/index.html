@@ -53,7 +53,7 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
+          engineInitializer.initializeEngine({renderer: "canvaskit"}).then(function(appRunner) {
             appRunner.runApp();
             document.querySelector('.logo-center')?.remove();
           });

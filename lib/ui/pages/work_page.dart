@@ -4,6 +4,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/ui/widgets/app_button.dart';
 import 'package:portfolio/ui/widgets/app_card.dart';
+import 'package:portfolio/ui/widgets/scale_animate.dart';
+import 'package:portfolio/ui/widgets/simple_tilt.dart';
 import 'package:portfolio/ui/widgets/slide_in_grid.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:portfolio/util/project_model.dart';
@@ -18,12 +20,15 @@ class WorkPage extends StatelessWidget {
     final isMobile = Utils.isMobile(context);
     return Center(
       child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 1000.0),
+        constraints: const BoxConstraints(maxWidth: 1100.0),
         child: ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
           child: AnimationLimiter(
             child: MasonryGridView.count(
-              padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: isMobile ? 24.0 : 48.0),
+              padding: EdgeInsets.symmetric(
+                horizontal: isMobile ? 24.0 : 100.0,
+                vertical: isMobile ? 24.0 : 48.0,
+              ),
               itemCount: allProjects.length,
               crossAxisCount: isMobile ? 1 : 2,
               mainAxisSpacing: 16.0,
@@ -83,7 +88,10 @@ class WorkPage extends StatelessWidget {
                                     triggerMode: TooltipTriggerMode.tap,
                                     message: tool.name,
                                     textStyle: Styles.bodyMedium.copyWith(color: AppColors.cardColor),
-                                    child: SvgPicture.asset(tool.icon, height: 64.0),
+                                    child: SimpleTilt(
+                                      scale: true,
+                                      child: SvgPicture.asset(tool.icon, height: 52.0),
+                                    ),
                                   ),
                                   const SizedBox(width: 8.0),
                                 ],
@@ -93,7 +101,13 @@ class WorkPage extends StatelessWidget {
                               const SizedBox()
                             else ...[
                               const SizedBox(height: 24.0),
-                              AppButton(onTap: () => launchUrl(url), text: project.action),
+                              SimpleTilt(
+                                scale: true,
+                                child: AppButton(
+                                  onTap: () => launchUrl(url),
+                                  text: project.action,
+                                ),
+                              ),
                             ],
                           ],
                         ),

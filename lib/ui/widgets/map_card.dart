@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/widgets/app_card.dart';
+import 'package:portfolio/ui/widgets/scale_animate.dart';
+import 'package:portfolio/ui/widgets/simple_tilt.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:portfolio/util/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -19,7 +21,15 @@ class MapCard extends StatelessWidget {
         height: cardWidth,
         padding: EdgeInsets.zero,
         bgImage: Images.map_placeholder,
-        child: const Center(child: Image(height: 100.0, image: AssetImage(Images.map_marker))),
+        child: const Center(
+          child: ScaleAnimate(
+            scale: 1.5,
+            child: SimpleTilt(
+              radius: 50.0,
+              child: Image(height: 100.0, image: AssetImage(Images.map_marker)),
+            ),
+          ),
+        ),
       ),
     );
   }

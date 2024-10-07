@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio/ui/widgets/app_card.dart';
+import 'package:portfolio/ui/widgets/simple_tilt.dart';
 import 'package:portfolio/util/constants.dart';
 import 'package:portfolio/util/utils.dart';
+
+typedef Lang = ({String image, String name, String symbol});
 
 class LanguageCard extends StatelessWidget {
   const LanguageCard({super.key});
@@ -13,7 +15,15 @@ class LanguageCard extends StatelessWidget {
     final isMobile = Utils.isMobile(context);
     final space = SizedBox(height: isMobile ? 12.0 : 0.0);
 
+    const langs = <Language>[
+      Language(lang: (image: Images.letter_urdu, name: Texts.urdu, symbol: '#')),
+      Language(lang: (image: Images.letter_tamil, name: Texts.tamil, symbol: '◊')),
+      Language(lang: (image: Images.letter_english, name: Texts.english, symbol: '◊')),
+      Language(lang: (image: Images.letter_hindi, name: Texts.hindi, symbol: '#')),
+    ];
+
     return AppCard(
+      width: double.infinity,
       constraints: BoxConstraints(maxWidth: 700.0, minHeight: Utils.cardWidth(context)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -31,28 +41,19 @@ class LanguageCard extends StatelessWidget {
             ),
           ),
           space,
-          Wrap(
-            spacing: isMobile ? 18.0 : 36.0,
-            runSpacing: 18.0,
-            children: const [
-              Language(image: Images.letter_urdu, name: Texts.urdu, symbol: '#'),
-              Language(image: Images.letter_tamil, name: Texts.tamil, symbol: '◊'),
-              Language(image: Images.letter_english, name: Texts.english, symbol: '◊'),
-              Language(image: Images.letter_hindi, name: Texts.hindi, symbol: '#'),
-            ],
-          ),
+          Wrap(spacing: isMobile ? 18.0 : 36.0, runSpacing: 18.0, children: langs),
           space,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('#', style: Styles.bodyMediumBold.copyWith(color: AppColors.primary)),
-              const SizedBox(width: 12.0),
-              const Text(Texts.speak, style: Styles.bodySmall),
-              const SizedBox(width: 24.0),
-              Text('◊', style: Styles.bodyMediumBold.copyWith(color: AppColors.primary)),
-              const SizedBox(width: 12.0),
-              const Text(Texts.rws, style: Styles.bodySmall),
-            ],
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              style: Styles.bodyMediumBold.copyWith(color: AppColors.primary, height: 1.8),
+              children: const [
+                TextSpan(text: '# '),
+                TextSpan(text: Texts.speak, style: Styles.bodySmall),
+                TextSpan(text: '  ◊ '),
+                TextSpan(text: Texts.rws, style: Styles.bodySmall),
+              ],
+            ),
           ),
           space,
         ],
@@ -62,29 +63,36 @@ class LanguageCard extends StatelessWidget {
 }
 
 class Language extends StatelessWidget {
-  const Language({super.key, required this.image, required this.name, required this.symbol});
+  const Language({super.key, required this.lang});
 
-  final String symbol;
-  final String image;
-  final String name;
+  final Lang lang;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 106.0,
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
-      decoration: BoxDecoration(
-        border: Border.all(color: AppColors.secondary, width: 1.0),
-        borderRadius: BorderRadius.circular(12.0),
-      ),
-      child: Column(
-        children: [
-          Text(symbol, style: Styles.bodyMediumBold.copyWith(color: AppColors.primary)),
-          const SizedBox(height: 12.0),
-          SvgPicture.asset(image, height: 28.0),
-          const SizedBox(height: 20.0),
-          Text(name, style: Styles.bodyMedium),
-        ],
+    return SimpleTilt(
+      shadow: true,
+      scale: true,
+      child: Container(
+        width: 106.0,
+        padding: const EdgeInsets.symmetric(vertical: 10.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: AppColors.secondary, width: 1.0),
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+        child: Column(
+          children: [
+            Text(lang.symbol, style: Styles.bodyMediumBold.copyWith(color: AppColors.primary)),
+            const SizedBox(height: 12.0),
+            SvgPicture.asset(
+              lang.image,
+              height: 28.0,
+              colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
+            ),
+            const SizedBox(height: 20.0),
+            Text(lang.name, style: Styles.bodyMedium),
+          ],
+        ),
       ),
     );
   }
