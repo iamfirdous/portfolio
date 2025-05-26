@@ -32,9 +32,9 @@ class AboutPage extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: isMobile ? 16.0 : 48.0),
       child: AnimationLimiter(
         child: Column(
+          spacing: 16.0,
           children: [
             flex(const SummaryCard(), const ContactCard(), 1),
-            const SizedBox(height: 16.0),
             flex(const MapCard(), const LanguageCard(), 2),
           ],
         ),
