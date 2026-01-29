@@ -37,12 +37,12 @@ class AppCard extends StatelessWidget {
       height: height,
       constraints: constraints,
       padding: padding,
-      clipBehavior: Clip.hardEdge,
+      clipBehavior: .hardEdge,
       decoration: BoxDecoration(
         color: AppColors.cardColor,
         borderRadius: borderRadius,
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4.0)],
-        image: bgImage != null ? DecorationImage(image: AssetImage(bgImage!), fit: BoxFit.cover) : null,
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.08), blurRadius: 4.0)],
+        image: bgImage != null ? DecorationImage(image: AssetImage(bgImage!), fit: .cover) : null,
       ),
       child: child,
     );

@@ -115,6 +115,9 @@ class Texts {
   static const String project_11_name = 'Y9 - Microfinance';
   static const String project_11_desc = 'Worked on a mobile app for a Tanzanian bank enabling customers to buy smartphones on loan and make daily repayments. Features include NIDA and KYC verification, short-term loans, credit score checks, and a separate agent app for customer onboarding.';
   static const String project_11_role = 'Front-end developer';
+  static const String project_12_name = 'Abacus Online Ordering';
+  static const String project_12_desc = 'Led the design and development of Abacus Online Ordering, a multi-tenant Flutter platform that enables restaurants to offer branded mobile ordering, payments, and loyalty experiences. Architected a script-driven configuration injection system (SKIN) to support rapid tenant onboarding without flavors, and built internal tooling including a web-based Online Ordering Studio for managing branding, assets, and feature configuration with real-time preview. Refactored a large, unstructured legacy codebase into a clean, modular architecture, significantly improving maintainability, build reliability, and developer productivity.';
+  static const String project_12_role = 'Front-end developer';
   static const String playstore = 'PlayStore';
   static const String app_tour = 'App tour';
   static const String try_web = 'Try web app';

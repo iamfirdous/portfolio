@@ -26,10 +26,10 @@ class SummaryCard extends StatelessWidget {
       ),
       padding: EdgeInsets.fromLTRB(padding, 30.0, padding, 0.0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: .spaceBetween,
         children: [
           RichText(
-            textAlign: TextAlign.justify,
+            textAlign: .justify,
             text: const TextSpan(
               style: Styles.bodyMedium,
               children: [
@@ -47,8 +47,8 @@ class SummaryCard extends StatelessWidget {
           ),
           const SizedBox(height: 18.0),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: .spaceBetween,
+            crossAxisAlignment: .start,
             children: [
               Padding(
                 padding: EdgeInsets.only(left: isMobile ? 0.0 : 32.0),
@@ -79,7 +79,7 @@ class SummaryCard extends StatelessWidget {
     final blob = html.Blob([byteData.buffer.asUint8List()]);
     final url = html.Url.createObjectUrlFromBlob(blob);
     html.AnchorElement(href: url)
-      ..setAttribute('download', 'Firdous - Resume - v1.4.pdf')
+      ..setAttribute('download', 'Firdous - Resume - v1.6.pdf')
       ..click();
   }
 }

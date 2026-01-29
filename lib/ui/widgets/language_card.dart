@@ -26,8 +26,8 @@ class LanguageCard extends StatelessWidget {
       width: double.infinity,
       constraints: BoxConstraints(maxWidth: 700.0, minHeight: Utils.cardWidth(context)),
       child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: .min,
+        mainAxisAlignment: .spaceBetween,
         children: [
           space,
           const Flexible(
@@ -36,7 +36,7 @@ class LanguageCard extends StatelessWidget {
               child: Text(
                 Texts.language_title,
                 style: Styles.headlineMedium1,
-                textAlign: TextAlign.center,
+                textAlign: .center,
               ),
             ),
           ),
@@ -44,7 +44,7 @@ class LanguageCard extends StatelessWidget {
           Wrap(spacing: isMobile ? 18.0 : 36.0, runSpacing: 18.0, children: langs),
           space,
           RichText(
-            textAlign: TextAlign.center,
+            textAlign: .center,
             text: TextSpan(
               style: Styles.bodyMediumBold.copyWith(color: AppColors.primary, height: 1.8),
               children: const [

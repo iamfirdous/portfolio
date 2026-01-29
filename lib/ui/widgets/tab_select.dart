@@ -36,7 +36,7 @@ class TabSelect extends StatelessWidget {
               color: AppColors.cardColor,
               borderRadius: BorderRadius.circular(32.0),
               boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 4.0)
+                BoxShadow(color: Colors.black.withValues(alpha: 0.08), blurRadius: 4.0)
               ],
             ),
             child: TiltParallax(
@@ -84,7 +84,7 @@ class TabSelect extends StatelessWidget {
         final controller = DefaultTabController.of(context);
         controller.addListener(() => onChange != null ? onChange!(controller.index) : null);
         return Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: .min,
           children: [
             SizedBox(height: isMobile ? 12.0 : 48.0),
             if (isMobile) ...[
@@ -98,7 +98,7 @@ class TabSelect extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 64.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: .spaceBetween,
                   children: [name, tabs(controller), contact],
                 ),
               ),

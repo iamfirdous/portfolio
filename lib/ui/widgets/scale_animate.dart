@@ -47,7 +47,7 @@ class _ScaleAnimateState extends State<ScaleAnimate> with SingleTickerProviderSt
         onExit: (_) => scaleAnimationController.reverse(),
         child: ScaleTransition(
           scale: scaleAnimation,
-          alignment: Alignment.center,
+          alignment: .center,
           filterQuality: FilterQuality.high,
           child: widget.child,
         ),

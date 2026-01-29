@@ -40,8 +40,8 @@ class WorkPage extends StatelessWidget {
                   position: index,
                   child: AppCard(
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: .min,
+                      crossAxisAlignment: .start,
                       children: [
                         RichText(
                           text: TextSpan(
@@ -65,22 +65,22 @@ class WorkPage extends StatelessWidget {
                         Text(
                           project.desc,
                           style: Styles.bodyMedium.copyWith(height: 2.0),
-                          textAlign: TextAlign.justify,
+                          textAlign: .justify,
                         ),
                         const SizedBox(height: 12.0),
                         Flex(
-                          direction: isMobile ? Axis.vertical : Axis.horizontal,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: isMobile ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+                          direction: isMobile ? .vertical : .horizontal,
+                          mainAxisAlignment: .spaceBetween,
+                          crossAxisAlignment: isMobile ? .center : .start,
                           children: [
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: .center,
                               children: [
                                 for (final tool in project.tools) ...[
                                   Tooltip(
                                     padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 2.0),
                                     decoration: BoxDecoration(
-                                      color: AppColors.secondary.withOpacity(0.8),
+                                      color: AppColors.secondary.withValues(alpha: 0.8),
                                       borderRadius: BorderRadius.circular(4.0),
                                     ),
                                     verticalOffset: 38.0,

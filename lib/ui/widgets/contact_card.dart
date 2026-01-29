@@ -40,14 +40,14 @@ class ContactCard extends StatelessWidget {
             height: itemWidth,
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: .center,
               children: [
                 const Text('RN it\'s', style: Styles.bodySmall),
                 const SizedBox(height: 8.0),
                 Text(
                   '$hours:$min\n$a',
                   style: Styles.headlineMedium.copyWith(fontSize: 28.0, height: 1.0),
-                  textAlign: TextAlign.center,
+                  textAlign: .center,
                 ),
                 const SizedBox(height: 8.0),
                 const Text('in India', style: Styles.bodySmall),

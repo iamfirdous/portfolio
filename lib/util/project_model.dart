@@ -37,4 +37,5 @@ const allProjects = [
   Project('9', Texts.project_9_name, Texts.project_9_role, Texts.project_9_desc, [Tool.flutter(), Tool.firebase(), Tool.figma()], Texts.playstore, 'https://play.google.com/store/apps/details?id=com.calibraint.maxisassets'),
   Project('10', Texts.project_10_name, Texts.project_10_role, Texts.project_10_desc, [Tool.flutter(), Tool.firebase()], '', ''),
   Project('11', Texts.project_11_name, Texts.project_11_role, Texts.project_11_desc, [Tool.flutter()], Texts.playstore, 'https://play.google.com/store/apps/developer?id=Y9+Inc'),
+  Project('12', Texts.project_12_name, Texts.project_12_role, Texts.project_12_desc, [Tool.flutter(), Tool.firebase()], Texts.playstore, 'https://play.google.com/store/apps/details?id=com.happypointsg&hl=en_IN'),
 ];

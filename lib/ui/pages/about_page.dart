@@ -17,9 +17,9 @@ class AboutPage extends StatelessWidget {
     Widget flex(Widget card1, Widget card2, int position) {
       final duration = position == 2 ? animationDuration : 600;
       return Flex(
-        direction: isMobile ? Axis.vertical : Axis.horizontal,
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
+        direction: isMobile ? .vertical : .horizontal,
+        mainAxisAlignment: .center,
+        mainAxisSize: .min,
         children: [
           SlideInGrid(position: position == 1 ? 0 : 2, duration: duration, child: card1),
           const SizedBox.square(dimension: 16.0),

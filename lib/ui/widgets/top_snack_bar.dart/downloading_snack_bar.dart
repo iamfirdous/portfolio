@@ -16,7 +16,7 @@ class DownloadingSnackBar extends StatefulWidget {
     this.backgroundColor = const Color(0xB3524FE0),
     this.boxShadow = kDefaultBoxShadow,
     this.borderRadius = kDefaultBorderRadius,
-    this.textAlign = TextAlign.center,
+    this.textAlign = .center,
   });
 
   final String message;
@@ -37,13 +37,13 @@ class DownloadingSnackBarState extends State<DownloadingSnackBar> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Align(
-      alignment: Alignment.bottomRight,
+      alignment: .bottomRight,
       child: Container(
         width: double.infinity,
         height: 68.0,
         constraints: const BoxConstraints(maxWidth: 450.0),
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
-        clipBehavior: Clip.hardEdge,
+        clipBehavior: .hardEdge,
         decoration: BoxDecoration(
           color: widget.backgroundColor,
           borderRadius: widget.borderRadius,
@@ -57,7 +57,7 @@ class DownloadingSnackBarState extends State<DownloadingSnackBar> {
               widget.message,
               style: theme.textTheme.bodyMedium?.merge(widget.textStyle),
               textAlign: widget.textAlign,
-              overflow: TextOverflow.ellipsis,
+              overflow: .ellipsis,
               maxLines: widget.maxLines,
             ),
           ],
