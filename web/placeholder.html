@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firdous Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4fc;
+      color: #333;
+    }
+    header, nav, main {
+      padding: 1rem;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6a5acd;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+    }
+    nav a.active {
+      background-color: #6a5acd;
+      color: #fff;
+    }
+    .contact {
+      color: #6a5acd;
+      font-weight: bold;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .highlight {
+      color: #6a5acd;
+      font-weight: bold;
+    }
+    .resume-button {
+      background-color: #6a5acd;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    .side-panel {
+      display: grid;
+      gap: 1rem;
+    }
+    .side-card {
+      text-align: center;
+      padding: 1rem;
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .languages {
+      text-align: center;
+    }
+    .languages h3 {
+      color: #6a5acd;
+    }
+    .lang-box {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .lang {
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 80px;
+    }
+    .icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .icons img {
+      width: 40px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">firdous</div>
+    <nav>
+      <a href="#">Timeline</a>
+      <a href="#" class="active">About</a>
+      <a href="#">Work</a>
+    </nav>
+    <div class="contact">Contact</div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <p>I'm <span class="highlight">firdous</span>, a developer from India. I have experience primarily in mobile app projects, working with various frameworks such as <strong>Flutter</strong>, <strong>Native Android</strong> and <strong>Ionic</strong>.</p>
+      <button class="resume-button">Resume</button>
+      <img src="https://via.placeholder.com/150x150" alt="developer" style="margin-top: 1rem;" />
+    </div>
+    <div class="side-panel">
+      <div class="card side-card">
+        <p>RN it's</p>
+        <h2 class="highlight">09:33 pm</h2>
+        <p>in India</p>
+      </div>
+      <div class="card icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="map">
+      <img src="https://via.placeholder.com/600x300?text=Map+of+Chennai" alt="Map" style="width: 100%; height: 100%; object-fit: cover;" />
+    </div>
+    <div class="card languages">
+      <h3>You can speak with me in</h3>
+      <div class="lang-box">
+        <div class="lang">
+          <p style="font-size: 2rem;">ا</p>
+          <p>Urdu</p>
+        </div>
+        <div class="lang">
+          <p style="font-size: 2rem;">அ</p>
+          <p>Tamil</p>
+        </div>
+        <div class="lang">
+          <p style="font-size: 2rem;">a</p>
+          <p>English</p>
+        </div>
+        <div class="lang">
+          <p style="font-size: 2rem;">अ</p>
+          <p>Hindi</p>
+        </div>
+      </div>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;"># Speak ◦ Read, Write and Speak</p>
+    </div>
+  </div>
+</body>
+</html>

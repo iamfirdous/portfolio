@@ -1,0 +1,97 @@
+\documentclass[10.5pt]{article}
+
+\usepackage[letterpaper,margin=0.7in,top=0.55in,bottom=0.55in]{geometry}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+
+\pagestyle{empty}
+\renewcommand{\baselinestretch}{0.96}
+
+% Section formatting: small caps, bold, with a rule beneath
+\titleformat{\section}{\scshape\bfseries\large}{}{0em}{}[\vspace{3pt}\hrule]
+\titlespacing{\section}{0pt}{4pt}{4pt}
+
+\setlist[itemize]{leftmargin=1.3em, topsep=0pt, partopsep=0pt, itemsep=0pt, parsep=0pt, before=\setlength{\parskip}{0pt}, after=\vspace{0pt}}
+
+\newcommand{\role}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#3}\\
+  {\itshape #2} \hfill {\itshape #4}\par
+}
+
+\begin{document}
+
+% ---------- Header ----------
+\noindent
+\begin{minipage}[t]{0.33\textwidth}
+Chennai, Tamil Nadu\\
+India
+\end{minipage}%
+\begin{minipage}[t]{0.34\textwidth}
+\centering
+{\scshape\Large Firdous Ismail}
+\end{minipage}%
+\begin{minipage}[t]{0.33\textwidth}
+\raggedleft
+\href{https://linkedin.com/in/iamfirdous}{linkedin.com/in/iamfirdous}\\
+thisisfirdous@gmail.com
+\end{minipage}
+
+\vspace{2pt}
+\noindent\textbf{Senior Software Engineer (Flutter)} \hfill \mbox{\textit{Shipping white-label consumer apps and the internal factory that produces them}}
+
+% ---------- Employment ----------
+\section*{\scshape Employment}
+
+\role{Senior Flutter Engineer}{Nomni (formerly Liven)}{Apr 2024 -- Present}{Chennai}
+\begin{itemize}
+\item Designed and built Online Ordering Studio, an internal App Factory that enables non-engineers to configure, brand, preview, and generate white-label Flutter apps; automated the workflow with AI-assisted brand intake, one-click demo APK generation, and Firebase tenant provisioning.
+\item Built and maintained a multi-tenant Flutter architecture powering 10+ production brands, including Roll'd, Dumpling Chef, XGolf, Lune, La Veen, and Dopa, reducing tenant onboarding from 4–5 days to under a day (~80–90% reduction).
+\end{itemize}
+
+\vspace{2pt}
+\role{Software Engineer -- Flutter}{Crayon Data}{Dec 2022 -- Apr 2024}{Chennai}
+\begin{itemize}
+\item Developed a Flutter microfinance platform for a Tanzanian bank, enabling smartphone financing and daily loan repayments with NIDA/KYC verification, credit scoring, and a dedicated agent onboarding app.
+\end{itemize}
+
+\vspace{2pt}
+\role{Software Engineer $\rightarrow$ Associate Technical Lead (Mobile)}{Calibraint}{Mar 2018 -- Nov 2022}{Chennai}
+\begin{itemize}
+\item Developed and maintained mobile and web applications across fintech, healthcare, education, agriculture, retail, and on-demand services, using Flutter, Native Android, Ionic, Angular, Firebase, and Node.js.
+\item Delivered applications for clients including Alcon, Wall Street English, Collin College, and TengoInternet, spanning healthcare visualization, language learning, campus services, farm management, asset tracking, retail counting, and consumer marketplaces.
+\end{itemize}
+
+\vspace{2pt}
+\role{Android Developer -- Intern}{Nexusinfo}{Nov 2017 -- Feb 2018}{Bengaluru}
+\begin{itemize}
+\item Assisted in Android app dev and feature implementation; gained hands-on experience across the app lifecycle and debugging
+\end{itemize}
+
+% ---------- Education ----------
+\section*{\scshape Education}
+
+\role{Master of Computer Applications (MCA)}{AMS College of Engineering}{2016 -- 2018}{Chennai}
+\role{Bachelor of Computer Applications (BCA)}{The New College}{2013 -- 2016}{Chennai}
+
+% ---------- Additional Experience and Awards ----------
+\section*{\scshape Additional Experience and Awards}
+\vspace{8pt}
+\begin{itemize}
+\item \textbf{Community Talk (May 2026):} \textit{``Building Instant-First Web Experiences using Jaspr + Flutter''} -- presented at Namma Flutter (Flutter Chennai), showcasing Online Ordering Studio as a real-world Jaspr + Flutter case study; awarded \textbf{``Consistent Contributor''} by the Namma Flutter community.
+\item \textbf{Speaker, FOSS United Chennai (Apr 2026):} Delivered a session at IIT Madras on using Jaspr to improve Flutter Web load performance, demonstrated live on a personal portfolio project.
+\item \textbf{Community Talk (Nov 2024):} \textit{``Creating Major Impact with Minor Changes''} -- presented at Namma Flutter (Flutter Chennai), hosted by YuniQ, on Dart tips and optimizations for cleaner, more standardized code.
+\item \textbf{Best Team Player, Calibraint Annual Awards (2021):} Recognized for high-level productivity and team performance.
+\end{itemize}
+
+% ---------- Languages and Technologies ----------
+\section*{\scshape Languages and Technologies}
+
+\textbf{Languages:} Urdu (Native), Tamil (Native), English (Fluent), Hindi (Fluent)
+
+\textbf{Technologies:} Dart, Flutter (iOS/Android/Web embed), BLoC, Clean Architecture, GoRouter, Firebase (Auth, Firestore, Hosting, Cloud Functions, Crashlytics), Jaspr, TypeScript, Node.js, GitLab CI, GCS, Fastlane, Google Sign-In, Adyen, Stripe, WebP, SSE, Angular, Kotlin, Java, REST APIs
+
+\end{document}
