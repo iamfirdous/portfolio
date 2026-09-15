@@ -645,6 +645,7 @@ body {
 
 .project-period {
   color: var(--text-muted);
+  text-align: end;
 }
 
 .project-header {
@@ -1337,7 +1338,6 @@ body.lightbox-open {
     flex-direction: column;
     gap: 20px;
     padding-top: 48px;
-    border-top: 1px solid var(--border-subtle);
     margin-top: 24px;
   }
 
@@ -1447,18 +1447,10 @@ body.lightbox-open {
     align-self: flex-start;
   }
 
-  .contact-row {
-    flex-direction: column;
+        .contact-row {
     align-items: flex-start;
     gap: 10px;
     padding: 12px 14px;
-  }
-
-  .contact-action-group {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
   }
 
   .contact-value-link {
